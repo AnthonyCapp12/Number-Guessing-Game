@@ -1,0 +1,76 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class number {
+    public static void main(String[] args){
+        Scanner reader = new Scanner(System.in);
+        Random rand = new Random();
+
+        System.out.print("1.Easy/2.Intermediate/3.Veteran/4.One-In-a-Million: ");
+        int prompt = reader.nextInt();
+
+
+        if (prompt == 1){
+            int i = rand.nextInt(100)+1;
+            System.out.println("Easy Mode Selected: 1-100");
+        while(true){
+            System.out.print("Pick a Number: ");
+            int guess = reader.nextInt();
+
+            if (guess == i) {
+                System.out.println("Correct");
+                break;
+            } else if (guess > i) {
+                System.out.println("Too High");
+            } else if (guess < i) {
+                System.out.println("Too Low");
+                }
+            }
+        } else if (prompt == 2){
+            int i = rand.nextInt(1000)+1;
+            System.out.println("Intermediate Mode Selected: 1-1000");
+            while(true) {
+                System.out.print("Pick a number: ");
+                int guess = reader.nextInt();
+            if (guess == i) {
+                System.out.println("Correct!");
+                break;
+            } else if (guess > i) {
+                System.out.println("Too High");
+            } else if (guess < i) {
+                System.out.println("Too Low");
+            }
+        }
+    } else if (prompt == 3){
+            int i = rand.nextInt(100000)+1;
+            System.out.println("Veteran Mode Selected: 1-100,000");
+            while(true) {
+                System.out.print("Pick a number: ");
+                int guess = reader.nextInt();
+            if (guess == i) {
+                System.out.println("Correct!");
+                break;
+            } else if (guess > i) {
+                System.out.println("Too High");
+            } else if (guess < i) {
+                System.out.println("Too Low");
+            }
+        }
+    } else if (prompt == 4){
+            int i = rand.nextInt(1000000)+1;
+            System.out.println("One-In-A-Million Mode Selected: 1-1,000,000");
+            while(true) {
+                System.out.print("Pick a number: ");
+                int guess = reader.nextInt();
+            if (guess == i) {
+                System.out.println("Correct!");
+                break;
+            } else if (guess > i) {
+                System.out.println("Too High");
+            } else if (guess < i) {
+                System.out.println("Too Low");
+            }
+        }
+    }
+}
+}
